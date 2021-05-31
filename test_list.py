@@ -78,13 +78,13 @@ class TestList(unittest.TestCase):
 
         self.assertEqual(1, len(new_list))
 
-    # Add items to an list that has been cleared
-    def test_add_items_to_clear_list(self):
+    # Add items in a specific position
+    def test_add_items_to_list_specific(self):
         new_list = self.get_list()
-        new_list.clear()
-        new_list.append(1)
-
-        self.assertEqual(1, len(new_list))
+        index = 2
+        new_number = 9
+        new_list.insert(index, new_number)
+        self.assertEqual(new_number, new_list[index])
 
 #############################################
 
